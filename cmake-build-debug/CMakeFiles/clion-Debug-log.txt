@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\Linki\OneDrive\Escritorio\UP\UP 5to semestre\Procesamiento de imágenes\ClassWork_150823" -B "C:\Users\Linki\OneDrive\Escritorio\UP\UP 5to semestre\Procesamiento de imágenes\ClassWork_150823\cmake-build-debug"
+-- Found OpenCV: C:/tools/opencv/build (found version "4.7.0") 
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/Linki/OneDrive/Escritorio/UP/UP 5to semestre/Procesamiento de imágenes/ClassWork_150823/cmake-build-debug

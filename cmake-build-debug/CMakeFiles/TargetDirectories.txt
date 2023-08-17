@@ -1,0 +1,3 @@
+C:/Users/Linki/OneDrive/Escritorio/UP/UP 5to semestre/Procesamiento de imágenes/ClassWork_150823/cmake-build-debug/CMakeFiles/ClassWork_150823.dir
+C:/Users/Linki/OneDrive/Escritorio/UP/UP 5to semestre/Procesamiento de imágenes/ClassWork_150823/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Linki/OneDrive/Escritorio/UP/UP 5to semestre/Procesamiento de imágenes/ClassWork_150823/cmake-build-debug/CMakeFiles/rebuild_cache.dir
