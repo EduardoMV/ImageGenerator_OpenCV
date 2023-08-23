@@ -12,6 +12,9 @@ int main() {
     Mat C(500, 500, CV_8U, Scalar(0));
     Mat D(500,500, CV_8U, Scalar(0));
     Mat E(500,500, CV_8U, Scalar(0));
+    Mat F(500,500, CV_8U, Scalar(0));
+    Mat G(500,500, CV_8U, Scalar(0));
+    Mat H(500,500, CV_8U, Scalar(0));
 
     //MatB
     for (int j = 255; j < 499; j++){
@@ -74,6 +77,27 @@ int main() {
         }
     }
 
+    //Mat F (Gradient)
+    for(int j = 0; j < F.rows; j++){
+        for (int i = 0; i < F.cols; i++){
+            F.at<uchar>(i, j) = static_cast<uchar>(255 * (static_cast<float>(j) / F.rows));
+        }
+    }
+
+    //Mat G (Diagonal Gradient B-W)
+    for(int j = 0; j < G.rows; j++){
+        for (int i = 0; i < G.cols; i++){
+            G.at<uchar>(j, i) = static_cast<uchar>(255 * (j + i) / (G.rows + G.cols));
+        }
+    }
+
+    //Mat H (Diagonal Gradient W-B)
+    for(int j = 0; j < H.rows; j++){
+        for (int i = 0; i < H.cols; i++){
+            H.at<uchar>(j, i) = static_cast<uchar>(255 - (255 * (j + i) / (H.rows + H.cols)));
+        }
+    }
+
 
     namedWindow("PhotoFrame", WINDOW_NORMAL);
     imshow("PhotoFrame", A);
@@ -85,6 +109,12 @@ int main() {
     imshow("PhotoFrame", D);
     waitKey(0);
     imshow("PhotoFrame", E);
+    waitKey(0);
+    imshow("PhotoFrame", F);
+    waitKey(0);
+    imshow("PhotoFrame", G);
+    waitKey(0);
+    imshow("PhotoFrame", H);
     waitKey(0);
     return 0;
 }
