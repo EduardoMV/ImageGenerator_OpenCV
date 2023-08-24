@@ -15,6 +15,7 @@ int main() {
     Mat F(500,500, CV_8U, Scalar(0));
     Mat G(500,500, CV_8U, Scalar(0));
     Mat H(500,500, CV_8U, Scalar(0));
+    Mat I(500,500, CV_8U, Scalar(0));
 
     //MatB
     for (int j = 255; j < 499; j++){
@@ -98,6 +99,25 @@ int main() {
         }
     }
 
+    //Mat I (Square over square)
+    for (int j = 50; j < 450; j++) {
+        for (int i = 50; i < 450; i++) {
+            I.at<uchar>(j, i) = 255; // White square
+        }
+    }
+
+    for (int j = 100; j < 400; j++) {
+        for (int i = 100; i < 400; i++) {
+            I.at<uchar>(j, i) = 0; // Black square
+        }
+    }
+
+    for (int j = 150; j < 350; j++) {
+        for (int i = 150; i < 350; i++) {
+            I.at<uchar>(j, i) = 255; // White square
+        }
+    }
+
 
     namedWindow("PhotoFrame", WINDOW_NORMAL);
     imshow("PhotoFrame", A);
@@ -109,6 +129,8 @@ int main() {
     imshow("PhotoFrame", D);
     waitKey(0);
     imshow("PhotoFrame", E);
+    waitKey(0);
+    imshow("PhotoFrame", I);
     waitKey(0);
     imshow("PhotoFrame", F);
     waitKey(0);
